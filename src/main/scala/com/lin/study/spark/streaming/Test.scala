@@ -1,5 +1,6 @@
 package com.lin.study.spark.streaming
 
+import com.google.common.base.Splitter
 import org.joda.time._
 import org.joda.time.format.DateTimeFormat
 
@@ -28,5 +29,10 @@ object Test {
     val str2 = "23,45,34,36".split(",").toList.slice(0,6)
     str2.foreach(println)
     println(str2.length)
+
+    val splitter = Splitter.on("""\001""")
+
+    val toSplit="""11\00122\00133"""
+    println(toSplit.split(toSplit)(0))
   }
 }

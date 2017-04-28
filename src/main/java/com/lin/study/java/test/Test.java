@@ -26,6 +26,11 @@ public class Test {
         //for(String s : strings) {
         //   System.out.println(s);
         System.out.println("aaaa".split("\\.")[0]);
+        System.out.println("--------------------------");
+        System.out.println(Object.class.isAssignableFrom(Test.class));
+        System.out.println(new Test() instanceof Object);
+        System.out.println(int.class.isPrimitive());
+
     }
 
     public static String SMSsend(String url) {
