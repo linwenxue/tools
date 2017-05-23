@@ -1,5 +1,7 @@
 package com.lin.study.spark.streaming
 
+import java.util.function.Consumer
+
 import com.google.common.base.Splitter
 import org.joda.time._
 import org.joda.time.format.DateTimeFormat
@@ -30,9 +32,17 @@ object Test {
     str2.foreach(println)
     println(str2.length)
 
-    val splitter = Splitter.on("""\001""")
+    val splitter = Splitter.on(" ")
 
-    val toSplit="""11\00122\00133"""
-    println(toSplit.split(toSplit)(0))
+    val toSplit="""11    00122\00133"""
+//    println(splitter.split(toSplit).iterator.next)
+
+    println("xxxxxxxx")
+    splitter.split(toSplit).forEach(new Consumer[String] {
+      override def accept(t: String): Unit = println(t)
+    })
+
+    val map = Map("a"->1,"b"->2)
+    //println(map.getOrElse("c","10"))
   }
 }

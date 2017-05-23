@@ -1,4 +1,4 @@
-package com.lin.study.java.lock;
+package com.lin.study.java.concurrent.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
