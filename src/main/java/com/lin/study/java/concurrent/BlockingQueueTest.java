@@ -21,7 +21,7 @@ public class BlockingQueueTest {
 }
 
 
-class BlockingQueuePut implements Runnable{
+class BlockingQueuePut implements Runnable {
     private BlockingQueue queue;
 
     public BlockingQueuePut(){}
