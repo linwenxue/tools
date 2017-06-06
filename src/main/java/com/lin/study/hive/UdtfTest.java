@@ -8,13 +8,17 @@ import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
 import org.apache.hadoop.hive.serde2.objectinspector.StructObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
+import org.codehaus.jackson.map.ObjectMapper;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by wenxuelin on 2017/6/5.
  */
 public class UdtfTest extends GenericUDTF {
+    private ObjectMapper mapper = new ObjectMapper();
     @Override
     public void close() throws HiveException {
         // TODO Auto-generated method stub
@@ -36,21 +40,35 @@ public class UdtfTest extends GenericUDTF {
         fieldOIs.add(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
         fieldNames.add("col2");
         fieldOIs.add(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
+        fieldNames.add("col3");
+        fieldOIs.add(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
+        fieldNames.add("col4");
+        fieldOIs.add(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
+        fieldNames.add("col5");
+        fieldOIs.add(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
+        fieldNames.add("col6");
+        fieldOIs.add(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
 
         return ObjectInspectorFactory.getStandardStructObjectInspector(fieldNames,fieldOIs);
     }
 
     @Override
     public void process(Object[] args) throws HiveException {
-        String input = args[0].toString();
-        String[] test = input.split(";");
-        for(int i=0; i<test.length; i++) {
-            try {
-                String[] result = test[i].split(":");
-                forward(result);
-            } catch (Exception e) {
-                continue;
+        try {
+            if(args == null || args.length < 1 || args[0] == null
+                    || args[0].toString().length() == 0) return;
+
+            String input = args[0].toString();
+            List<Map<String, Object>> node = mapper.readValue(input, List.class);
+            for(Map m : node) {
+                Object[] obj = new Object[] {
+                        m.get("car_type_id").toString(),m.get("estimated_price").toString(),
+                        m.get("deadhead_price").toString(),m.get("minimum_amount").toString(),
+                        m.get("coupon_info").toString(),m.get("estimated_cost").toString()};
+                this.forward(obj);
             }
+        } catch (Exception e) {
+           throw new HiveException(e.getMessage());
         }
     }
 }
