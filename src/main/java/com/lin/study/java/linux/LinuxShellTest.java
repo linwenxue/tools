@@ -17,35 +17,22 @@ public class LinuxShellTest {
     class MyThread extends Thread {
         private volatile Process process;
         public void run() {
-            String[] command = {"/home/gridhadoop/test.sh", "flowInstId"};
+            String[] command = {"/home/bigdata/azkaban-solo-server-3.10.0/executions/4683/hive.sh"};
             ProcessBuilder builder = new ProcessBuilder(command);
             try {
                 process = builder.start();
-                // any error message?
-                StreamGobbler errorGobbler = new
-                        StreamGobbler(process.getErrorStream(), "ERROR");
-
-                // any output?
-                StreamGobbler outputGobbler = new
-                        StreamGobbler(process.getInputStream(), "OUTPUT");
-
-                // kick them off
+                StreamGobbler errorGobbler = new StreamGobbler(process.getErrorStream(), "ERROR");
+                StreamGobbler outputGobbler = new StreamGobbler(process.getInputStream(), "OUTPUT");
                 errorGobbler.start();
                 outputGobbler.start();
-
-                // any error???
                 int exitVal = process.waitFor();
                 System.out.println("ExitValue: " + exitVal);
-
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
-            } // 获取脚本错误输出
-            catch (InterruptedException e) {
-                // TODO Auto-generated catch block
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
-                //process.destroy();
+                process.destroy();
             }
         }
     }
@@ -53,24 +40,19 @@ public class LinuxShellTest {
     class StreamGobbler extends Thread {
         InputStream is;
         String type;
-
-        StreamGobbler(InputStream is, String type)
-        {
+        StreamGobbler(InputStream is, String type){
             this.is = is;
             this.type = type;
         }
 
-        public void run()
-        {
-            try
-            {
+        public void run(){
+            try{
                 InputStreamReader isr = new InputStreamReader(is);
                 BufferedReader br = new BufferedReader(isr);
                 String line = null;
                 while ((line = br.readLine()) != null)
                     System.out.println(line);
-            } catch (IOException ioe)
-            {
+            } catch (IOException ioe){
                 ioe.printStackTrace();
             }
         }
