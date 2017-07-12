@@ -1,0 +1,11 @@
+ReentrantLock 、synchronized 之间如何选择？
+
+ReentrantLock 在性能上 比 synchronized 更胜一筹。
+
+ReentrantLock 需格外小心，因为需要显式释放锁，lock() 后记得 unlock()，而且必须在 finally 里面，否则容易造成死锁。
+
+synchronized 隐式自动释放锁，使用方便。
+
+ReentrantLock 扩展性好，可中断锁，定时锁，自由控制。
+
+synchronized 一但进入阻塞等待，则无法中断等待。
