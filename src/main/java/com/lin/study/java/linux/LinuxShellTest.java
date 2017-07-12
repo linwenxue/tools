@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by linwenxue on 2015/1/5.
@@ -17,9 +19,14 @@ public class LinuxShellTest {
     class MyThread extends Thread {
         private volatile Process process;
         public void run() {
-            String[] command = {"/home/bigdata/azkaban-solo-server-3.10.0/executions/4683/hive.sh"};
+            String[] command = {"hive.sh"};
             ProcessBuilder builder = new ProcessBuilder(command);
             try {
+                Iterator<Map.Entry<String, String>> iterator = builder.environment().entrySet().iterator();
+                while (iterator.hasNext()) {
+                    Map.Entry<String, String> next = iterator.next();
+                    System.out.println("key-value:"+next.getKey()+"="+next.getValue());
+                }
                 process = builder.start();
                 StreamGobbler errorGobbler = new StreamGobbler(process.getErrorStream(), "ERROR");
                 StreamGobbler outputGobbler = new StreamGobbler(process.getInputStream(), "OUTPUT");
