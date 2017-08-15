@@ -13,7 +13,7 @@ import java.util.concurrent.CountDownLatch;
  *  public void await() throws InterruptedException
  * 构造方法参数指定了计数的次数
  * countDown方法，当前线程调用此方法，则计数减一
- * awaint方法，调用此方法会一直阻塞当前线程，直到计时器的值为0
+ * await方法，调用此方法会一直阻塞当前线程，直到计时器的值为0
  *
  * Created by wenxuelin on 2017/7/13.
  */
@@ -23,8 +23,10 @@ public class CountDownLatchTest {
         CountDownLatch latch=new CountDownLatch(2);//两个工人的协作
         Worker worker1=new Worker("zhang san", 5000, latch);
         Worker worker2=new Worker("li si", 8000, latch);
+        Worker worker3=new Worker("wang wu", 6000, latch);
         worker1.start();//
         worker2.start();//
+        worker3.start();//
         latch.await();//等待所有工人完成工作
         System.out.println("all work done at "+sdf.format(new Date()));
     }
