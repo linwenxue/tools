@@ -1,4 +1,4 @@
-package com.lin.study.java.db;
+package com.lin.java.db;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;

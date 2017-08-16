@@ -1,4 +1,4 @@
-package com.lin.study.java.proxy;
+package com.lin.java.proxy;
 
 
 public class ZooProxyTest {

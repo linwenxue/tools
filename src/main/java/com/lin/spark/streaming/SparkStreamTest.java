@@ -1,4 +1,4 @@
-package com.lin.study.spark.streaming;
+package com.lin.spark.streaming;
 
 /**
  * Created by wenxuelin on 2016/11/23.

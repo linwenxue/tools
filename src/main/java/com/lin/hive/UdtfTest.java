@@ -1,4 +1,4 @@
-package com.lin.study.hive;
+package com.lin.hive;
 
 import org.apache.hadoop.hive.ql.exec.UDFArgumentException;
 import org.apache.hadoop.hive.ql.exec.UDFArgumentLengthException;

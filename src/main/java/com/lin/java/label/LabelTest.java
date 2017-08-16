@@ -1,4 +1,4 @@
-package com.lin.study.java.label;
+package com.lin.java.label;
 
 /**
  * Created by linwenxue on 2015/8/19.

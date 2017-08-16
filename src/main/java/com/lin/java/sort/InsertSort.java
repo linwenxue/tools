@@ -1,4 +1,4 @@
-package com.lin.study.java.sort;
+package com.lin.java.sort;
 
 /**
  * Created by linwenxue on 2015/1/12.

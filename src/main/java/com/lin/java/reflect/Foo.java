@@ -1,4 +1,4 @@
-package com.lin.study.java.reflect;
+package com.lin.java.reflect;
 
 /**
  * Created by wenxuelin on 2017/6/2.

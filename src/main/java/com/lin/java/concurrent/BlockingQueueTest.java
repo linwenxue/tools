@@ -1,4 +1,4 @@
-package com.lin.study.java.concurrent;
+package com.lin.java.concurrent;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

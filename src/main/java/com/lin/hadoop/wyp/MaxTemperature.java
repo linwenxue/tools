@@ -1,4 +1,4 @@
-package com.lin.study.hadoop.wyp;
+package com.lin.hadoop.wyp;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;

@@ -1,4 +1,4 @@
-package com.lin.study.java.memory;
+package com.lin.java.memory;
 
 import sun.nio.ch.DirectBuffer;
 

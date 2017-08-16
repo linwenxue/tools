@@ -1,4 +1,4 @@
-package com.lin.study.java.linux;
+package com.lin.java.linux;
 
 import java.io.BufferedReader;
 import java.io.IOException;

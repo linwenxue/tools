@@ -1,4 +1,4 @@
-package com.lin.study.java.concurrent.lock;
+package com.lin.java.concurrent.lock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;

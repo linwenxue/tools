@@ -1,4 +1,4 @@
-package com.lin.study.java.thread.concurrent;
+package com.lin.java.thread.concurrent;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

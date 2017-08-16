@@ -1,4 +1,4 @@
-package com.lin.study.java.patterns.templet;
+package com.lin.java.patterns.templet;
 
 /**
  * Created by linwenxue on 2015/3/16.

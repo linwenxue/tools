@@ -1,4 +1,4 @@
-package com.lin.study.hadoop.learn;
+package com.lin.hadoop.learn;
 
 import org.apache.hadoop.yarn.api.records.ApplicationReport;
 import org.apache.hadoop.yarn.client.api.YarnClient;

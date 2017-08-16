@@ -1,4 +1,4 @@
-package com.lin.study.java.proxy;
+package com.lin.java.proxy;
 /**
  * 创建静态代理实现类
  * @author 

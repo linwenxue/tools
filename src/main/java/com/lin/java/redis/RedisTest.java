@@ -1,4 +1,4 @@
-package com.lin.study.java.redis;
+package com.lin.java.redis;
 
 
 import redis.clients.jedis.Jedis;

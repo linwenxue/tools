@@ -1,4 +1,4 @@
-package com.lin.study.java.test;
+package com.lin.java.test;
 
 /**
 * @Description: 测试类

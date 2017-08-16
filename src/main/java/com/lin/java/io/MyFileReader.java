@@ -1,4 +1,4 @@
-package com.lin.study.java.io;
+package com.lin.java.io;
 
 import java.io.*;
 

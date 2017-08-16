@@ -1,4 +1,4 @@
-package com.lin.study.hadoop.test;
+package com.lin.hadoop.test;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;

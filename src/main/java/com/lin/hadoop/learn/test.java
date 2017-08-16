@@ -1,4 +1,4 @@
-package com.lin.study.hadoop.learn;
+package com.lin.hadoop.learn;
 
 /**
  * Created by linwenxue on 2014/11/8.

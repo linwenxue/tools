@@ -1,4 +1,4 @@
-package com.lin.study.java.net;
+package com.lin.java.net;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

@@ -1,4 +1,4 @@
-package com.lin.study.java.image;
+package com.lin.java.image;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

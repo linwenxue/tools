@@ -1,4 +1,4 @@
-package com.lin.study.java.Integer;
+package com.lin.java.Integer;
 
 /**
  * 自动装箱和拆箱测试类

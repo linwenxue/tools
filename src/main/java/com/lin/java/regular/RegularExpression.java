@@ -1,4 +1,4 @@
-package com.lin.study.java.regular;
+package com.lin.java.regular;
 
 /**
  * Created by elevenlin@lagou.com on 2016/5/17.

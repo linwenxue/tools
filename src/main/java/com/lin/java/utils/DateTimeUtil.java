@@ -1,4 +1,4 @@
-package com.lin.study.java.utils;
+package com.lin.java.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;

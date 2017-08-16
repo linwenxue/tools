@@ -1,4 +1,4 @@
-package com.lin.study.java.thread;
+package com.lin.java.thread;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

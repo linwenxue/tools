@@ -1,4 +1,4 @@
-package com.lin.study.java.ftp;
+package com.lin.java.ftp;
 
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;

@@ -1,4 +1,4 @@
-package com.lin.study.java.http;
+package com.lin.java.http;
 
 
 import java.io.*;

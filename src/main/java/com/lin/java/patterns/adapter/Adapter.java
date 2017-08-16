@@ -1,4 +1,4 @@
-package com.lin.study.java.patterns.adapter;
+package com.lin.java.patterns.adapter;
 
 import com.google.common.base.Strings;
 

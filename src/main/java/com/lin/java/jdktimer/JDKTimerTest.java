@@ -1,4 +1,4 @@
-package com.lin.study.java.jdktimer;
+package com.lin.java.jdktimer;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

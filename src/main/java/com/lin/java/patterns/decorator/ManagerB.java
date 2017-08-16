@@ -1,4 +1,4 @@
-package com.lin.study.java.patterns.decorator;
+package com.lin.java.patterns.decorator;
 
 /**
  * Created by linwenxue on 2015/1/21.

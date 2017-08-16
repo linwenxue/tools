@@ -1,4 +1,4 @@
-package com.lin.study.java.proxy;
+package com.lin.java.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

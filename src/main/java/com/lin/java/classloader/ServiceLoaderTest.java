@@ -1,4 +1,4 @@
-package com.lin.study.java.classloader;
+package com.lin.java.classloader;
 
 import java.util.ServiceLoader;
 

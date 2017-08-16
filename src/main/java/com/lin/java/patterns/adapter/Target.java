@@ -1,4 +1,4 @@
-package com.lin.study.java.patterns.adapter;
+package com.lin.java.patterns.adapter;
 
 /**
  * Created by linwenxue on 2015/1/21.

@@ -1,4 +1,4 @@
-package com.lin.study.java.thread;
+package com.lin.java.thread;
 
 /**
  * Created by linwenxue on 2015/1/7.

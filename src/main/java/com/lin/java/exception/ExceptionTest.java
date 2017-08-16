@@ -1,4 +1,4 @@
-package com.lin.study.java.exception;
+package com.lin.java.exception;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package com.lin.study.java.json;
+package com.lin.java.json;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Test;

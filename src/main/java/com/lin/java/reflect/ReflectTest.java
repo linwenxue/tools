@@ -1,4 +1,4 @@
-package com.lin.study.java.reflect;
+package com.lin.java.reflect;
 
 import java.lang.reflect.Field;
 

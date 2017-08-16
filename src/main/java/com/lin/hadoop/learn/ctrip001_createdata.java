@@ -1,4 +1,4 @@
-package com.lin.study.hadoop.learn;
+package com.lin.hadoop.learn;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;

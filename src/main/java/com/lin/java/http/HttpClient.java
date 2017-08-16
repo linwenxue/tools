@@ -1,4 +1,4 @@
-package com.lin.study.java.http;
+package com.lin.java.http;
 
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.lang3.StringUtils;

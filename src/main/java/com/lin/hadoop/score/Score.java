@@ -1,4 +1,4 @@
-package com.lin.study.hadoop.score;
+package com.lin.hadoop.score;
 
 /**
  * Created by linwenxue on 2014/12/1.
