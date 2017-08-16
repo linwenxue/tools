@@ -16,7 +16,7 @@
  */
 
 // scalastyle:off println
-package com.lin.study.spark.streaming
+package com.lin.spark.streaming
 
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Seconds, StreamingContext}

@@ -1,4 +1,4 @@
-package com.lin.study.spark.streaming
+package com.lin.spark.streaming
 
 import java.util.function.Consumer
 
