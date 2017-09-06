@@ -1,4 +1,4 @@
-package com.lin.study.algorithm;
+package com.lin.algorithm;
 
 public class AddTwoNumbers {
     public class ListNode {

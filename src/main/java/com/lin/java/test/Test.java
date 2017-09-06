@@ -8,7 +8,8 @@ package com.lin.java.test;
 public class Test {
 
     public static void main(String[] args) throws Exception {
-        System.out.println(myPow(-2.00000,2));
+        //System.out.println(myPow(-2.00000,2));
+        //System.out.println(Double.valueOf(1e-15));
     }
 
     public static double myPow(double x, int n) {
@@ -47,5 +48,16 @@ public class Test {
             r = tmp*tmp*x;
         }
         return r;
+    }
+
+    public static double sqrt(double c) {
+        if (c < 0) return Double.NaN;
+        double err = 1e-15;
+        double t = c;
+        while(Math.abs(t - c/t) > err * t) {
+            t = (c / t + t) / 2.0;
+            System.out.println(t);
+        }
+        return t;
     }
 }
