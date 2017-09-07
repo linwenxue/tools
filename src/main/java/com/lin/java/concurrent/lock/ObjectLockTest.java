@@ -33,7 +33,7 @@ public class ObjectLockTest {
     }
 
     public static void main(String[] args) throws Exception{
-        ObjectLockTest t = new ObjectLockTest();
+        final ObjectLockTest t = new ObjectLockTest();
 
         Thread r1 = new Thread(){
             @Override
