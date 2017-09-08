@@ -54,7 +54,7 @@ public class ConditionTest2 {
 
 
     public static void main(String[] args) {
-        ConditionTest2 conditionTest2 = new ConditionTest2();
+        final ConditionTest2 conditionTest2 = new ConditionTest2();
 
         Thread t1 = new Thread(new Runnable() {
             @Override
