@@ -15,23 +15,21 @@ public class MaximumProductSubarray {
      * @return
      */
     public int maxProduct(int[] nums) {
-        if (nums.length == 0) {
-            return 0;
-        }
+        if (nums.length == 0) throw new IllegalArgumentException("nums could not empty!");
 
-        int maxherepre = nums[0];
-        int minherepre = nums[0];
-        int maxsofar = nums[0];
-        int maxhere, minhere;
+        int preMax = nums[0];
+        int preMin = nums[0];
+        int maxSofar = nums[0];
+        int cMax, cMin;
 
         for (int i = 1; i < nums.length; i++) {
-            maxhere = Math.max(Math.max(maxherepre * nums[i], minherepre * nums[i]), nums[i]);
-            minhere = Math.min(Math.min(maxherepre * nums[i], minherepre * nums[i]), nums[i]);
-            maxsofar = Math.max(maxhere, maxsofar);
-            maxherepre = maxhere;
-            minherepre = minhere;
+            cMax = Math.max(Math.max(preMax * nums[i], preMin * nums[i]), nums[i]);
+            cMin = Math.min(Math.min(preMax * nums[i], preMin * nums[i]), nums[i]);
+            maxSofar = Math.max(cMax, maxSofar);
+            preMax = cMax;
+            preMin = cMin;
         }
-        return maxsofar;
+        return maxSofar;
     }
 
 
