@@ -8,7 +8,7 @@ import java.util.Queue;
  */
 public class LayerTree {
     Node root;
-    static class Node {
+    private static class Node {
         int value;
         Node left, right;
 
@@ -37,14 +37,13 @@ public class LayerTree {
         if(node==null) return ;
         Queue<Node> queue = new ArrayDeque<Node>();
         //队列小知识：使用offer和poll优于add和remove之处在于它们返回值可以判断成功与否，而不抛出异常
-        queue.offer(node);              //进入队列
-        while(!queue.isEmpty())
-        {
-            node = queue.poll();           //当前节点出队列
+        queue.offer(node);//进入队列
+        while(!queue.isEmpty()) {
+            node = queue.poll();//当前节点出队列
             System.out.print(node.value);
-            if(node.left != null)              //当前节点左孩子去排队，在前面哦
+            if(node.left != null)//当前节点左孩子去排队，在前面哦
                 queue.offer(node.left);
-            if(node.right != null)            //右孩子排第二
+            if(node.right != null)//右孩子排第二
                 queue.offer(node.right);
         }
     }
