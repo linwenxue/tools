@@ -38,19 +38,6 @@ public class QuickSort {
     }
 
 
-    /*public int partition2(int[] n, int start, int end) {
-        int flag = n[start];
-        while (start < end) {
-            while(start < end && n[end] > flag) end--;
-            n[start++] = n[end];
-            while(start < end && n[start] < flag) start++;
-            n[end--] = n[start];
-        }
-        n[start] = flag;
-        return start;
-    }*/
-
-
     public static void main(String[] args) {
         QuickSort sorter = new QuickSort();
         int[] a = {49,38,65,97,76,13,27,49,78,34,12,64,5,4,62,99,98,54,56,17,18,23,34,15,35,25,53,51};
