@@ -25,7 +25,7 @@ public class MyHadoop {
         }
 
         JobConf conf = new JobConf(MyHadoop.class);
-        conf.setJobName("My Test");
+        conf.setJobName("My TimePeriodDup");
 
         FileInputFormat.addInputPath(conf, new Path(args[0]));
         FileOutputFormat.setOutputPath(conf, new Path(args[1]));
